@@ -1,0 +1,33 @@
+NEXA CHESS — Third-party notices
+
+chess.js 1.4.0 — Jeff Hlywa and contributors — BSD-2-Clause.
+Source: https://github.com/jhlywa/chess.js/tree/v1.4.0
+License: /licenses/chess.js-BSD.txt
+
+Stockfish.js 19.0.1 — Nathan Rugg, Chess.com LLC, Stockfish authors.
+GNU GPL version 3. Browser workers are unmodified distribution builds.
+Upstream source, build scripts and matching release:
+https://github.com/nmrugg/stockfish.js/tree/v19.0.1
+https://github.com/nmrugg/stockfish.js/releases/tag/v19.0.1
+https://github.com/official-stockfish/Stockfish
+License: /licenses/stockfish-GPL3.txt
+The full WASM is split into five sequential binary chunks without modification.
+Reconstruct with: cat full-0.bin full-1.bin full-2.bin full-3.bin full-4.bin > stockfish-19-single.wasm
+Compact WASM is provided intact. Both neural-network packages are original upstream binaries.
+
+SVG piece artwork from https://github.com/lichess-org/lila/tree/master/public/piece
+cburnett: Colin M. L. Burnett — GPL v2 or later.
+merida: Armando Hernandez Marroquin — GPL v2 or later.
+Unmodified SVG sources are the files directly served under /pieces/cburnett and /pieces/merida.
+Selected distribution license: GPLv3, permitted by GPLv2-or-later.
+Upstream attribution record: /licenses/lichess-COPYING.md
+License text: /licenses/stockfish-GPL3.txt
+
+Lucide icons — Lucide contributors — ISC.
+https://github.com/lucide-icons/lucide/blob/main/LICENSE
+DM Sans and Playfair Display — SIL Open Font License.
+https://github.com/google/fonts/tree/main/ofl/dmsans
+https://github.com/google/fonts/tree/main/ofl/playfairdisplay
+
+Hero artwork generated for this project using OpenAI image generation.
+Original NEXA interface and application code: provided under GPLv3.

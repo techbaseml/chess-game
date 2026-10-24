@@ -1,0 +1,3 @@
+import {integer,sqliteTable,text} from 'drizzle-orm/sqlite-core';
+export const rooms=sqliteTable('rooms',{id:text('id').primaryKey(),state:text('state').notNull(),whiteToken:text('white_token').notNull(),blackToken:text('black_token'),whiteName:text('white_name').notNull(),blackName:text('black_name'),version:integer('version').notNull().default(0),expires:integer('expires').notNull(),whiteSeen:integer('white_seen').notNull(),blackSeen:integer('black_seen').notNull().default(0)});
+export const limits=sqliteTable('limits',{id:text('id').primaryKey(),count:integer('count').notNull(),expires:integer('expires').notNull()});
