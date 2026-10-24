@@ -50,3 +50,6 @@ yarn-error.log*
 /public/engine/full-*.bin
 /public/engine/stockfish-19-*.wasm
 /public/engine/stockfish-19-*.js
+
+/.pages-src/
+/dist-pages/
