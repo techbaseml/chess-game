@@ -53,3 +53,7 @@ yarn-error.log*
 
 /.pages-src/
 /dist-pages/
+
+/.vercel-src/
+/dist-vercel/
+/.vercel/

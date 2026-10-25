@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm install -g pnpm@11.25.0 && pnpm install --frozen-lockfile",
+  "buildCommand": "node scripts/build-pages.mjs --vercel",
+  "outputDirectory": "dist-vercel",
+  "functions": {"api/rooms.js": {"maxDuration": 15}},
+  "headers": [{"source":"/api/(.*)","headers":[{"key":"Cache-Control","value":"no-store"}]}]
+}
