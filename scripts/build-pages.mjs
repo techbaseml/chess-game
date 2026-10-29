@@ -18,8 +18,14 @@ if(!vercel)app=app.split('\n').map(line=>line.includes("{page==='online'&&")?` {
 fs.writeFileSync(root+'/app/page.tsx',app);
 fs.copyFileSync('app/globals.css',root+'/app/globals.css');
 fs.writeFileSync(root+'/main.tsx',"import React from 'react';import{createRoot}from'react-dom/client';import App from './app/page';import './app/globals.css';createRoot(document.getElementById('root')!).render(<App/>);");
-fs.writeFileSync(root+'/index.html',`<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111F"><title>NEXA CHESS — Play Without Limits</title><meta name="application-name" content="NEXA CHESS"><meta name="apple-mobile-web-app-title" content="NEXA CHESS"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" type="image/png" sizes="192x192" href="${base}nexa-app-192.png"><link rel="icon" type="image/png" sizes="512x512" href="${base}nexa-app-512.png"><link rel="apple-touch-icon" href="${base}nexa-app-512.png"><link rel="manifest" href="${base}manifest.webmanifest?v=2"></head><body><div id="root"></div><script type="module" src="/main.tsx"></script></body></html>`);
+fs.writeFileSync(root+'/index.html',`<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111F"><meta name="google-site-verification" content="R2udG1RKVYTpmW1KnfOUm_4ibtw4hNvkyX_JJJYYO0w"><title>NEXA CHESS — Play Without Limits</title><meta name="application-name" content="NEXA CHESS"><meta name="apple-mobile-web-app-title" content="NEXA CHESS"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" type="image/png" sizes="192x192" href="${base}nexa-app-192.png"><link rel="icon" type="image/png" sizes="512x512" href="${base}nexa-app-512.png"><link rel="apple-touch-icon" href="${base}nexa-app-512.png"><link rel="manifest" href="${base}manifest.webmanifest?v=2"></head><body><div id="root"></div><script type="module" src="/main.tsx"></script></body></html>`);
 await build({configFile:false,root,base,publicDir:path.resolve('public'),plugins:[react()],build:{outDir:out,emptyOutDir:true}});
+if(vercel){
+  for(const name of ['sitemap.xml','robots.txt','googlee4bed4b0d5b41fff.html']){
+    const src=path.resolve('public',name);
+    if(fs.existsSync(src))fs.copyFileSync(src,path.join(out,name));
+  }
+}
 fs.writeFileSync(out+'/engine/full-worker.js',prefix(fs.readFileSync('public/engine/full-worker.js','utf8')));
 const manifest=JSON.parse(fs.readFileSync('public/manifest.webmanifest','utf8'));manifest.id=base;manifest.start_url=base;manifest.scope=base;for(const icon of manifest.icons)icon.src=base+icon.src.slice(1);fs.writeFileSync(out+'/manifest.webmanifest',JSON.stringify(manifest));
 function walk(p){return fs.readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(p,e.name)):[path.join(p,e.name)]);}
