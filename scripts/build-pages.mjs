@@ -21,7 +21,7 @@ fs.writeFileSync(root+'/main.tsx',"import React from 'react';import{createRoot}f
 fs.writeFileSync(root+'/index.html',`<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111F"><meta name="google-site-verification" content="R2udG1RKVYTpmW1KnfOUm_4ibtw4hNvkyX_JJJYYO0w"><title>NEXA CHESS — Play Without Limits</title><meta name="application-name" content="NEXA CHESS"><meta name="apple-mobile-web-app-title" content="NEXA CHESS"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" type="image/png" sizes="192x192" href="${base}nexa-app-192.png"><link rel="icon" type="image/png" sizes="512x512" href="${base}nexa-app-512.png"><link rel="apple-touch-icon" href="${base}nexa-app-512.png"><link rel="manifest" href="${base}manifest.webmanifest?v=2"></head><body><div id="root"></div><script type="module" src="/main.tsx"></script></body></html>`);
 await build({configFile:false,root,base,publicDir:path.resolve('public'),plugins:[react()],build:{outDir:out,emptyOutDir:true}});
 if(vercel){
-  for(const name of ['sitemap.xml','robots.txt','googlee4bed4b0d5b41fff.html']){
+  for(const name of ['sitemap.xml','robots.txt','googlee4bed4b0d5b41fff.html','google0fe60c3998189662.html']){
     const src=path.resolve('public',name);
     if(fs.existsSync(src))fs.copyFileSync(src,path.join(out,name));
   }
