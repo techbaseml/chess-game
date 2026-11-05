@@ -7,7 +7,7 @@ Import `techbaseml/chess-game` into a **Hobby** personal project. Use the reposi
 - Output: `dist-vercel`
 - Node: 22.x
 
-The same existing React client is built at `/`, including the real online create/join screens. Invitation links use the current Vercel origin. `/api/rooms` is a server-side gateway to the existing public NEXA CHESS room service. There is no browser redirect and no database secret in the frontend.
+The same existing React client is built at `/`, including the real online create/join screens. Invitation links use the current Vercel origin. `/api/rooms` is a server-side gateway to the existing public ZK CHESS room service. There is no browser redirect and no database secret in the frontend.
 
 ## Backend dependency and limits
 

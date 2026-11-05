@@ -1,6 +1,6 @@
 {
-  "name": "NEXA CHESS",
-  "short_name": "NEXA CHESS",
+  "name": "ZK CHESS",
+  "short_name": "ZK CHESS",
   "description": "Play Chess Without Limits",
   "start_url": "/",
   "display": "standalone",

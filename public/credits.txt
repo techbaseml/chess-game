@@ -1,4 +1,4 @@
-NEXA CHESS — Third-party notices
+ZK CHESS — Third-party notices
 
 chess.js 1.4.0 — Jeff Hlywa and contributors — BSD-2-Clause.
 Source: https://github.com/jhlywa/chess.js/tree/v1.4.0
@@ -30,4 +30,4 @@ https://github.com/google/fonts/tree/main/ofl/dmsans
 https://github.com/google/fonts/tree/main/ofl/playfairdisplay
 
 Hero artwork generated for this project using OpenAI image generation.
-Original NEXA interface and application code: provided under GPLv3.
+Original ZK interface and application code: provided under GPLv3.

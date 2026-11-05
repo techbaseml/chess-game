@@ -1,4 +1,4 @@
-# NEXA CHESS
+# ZK CHESS
 
 A working chess application with a navy-and-gold interface, wooden boards, open-source SVG pieces, local games, real Stockfish workers, analysis, and a private-room backend.
 
